@@ -2,6 +2,9 @@
 .htaccess
 sitemap.xml
 sitemap.xml.gz
+*.png
+*.jpg
+*.gif
 wp-config.php
 wp-content/advanced-cache.php
 wp-content/backup-db/
