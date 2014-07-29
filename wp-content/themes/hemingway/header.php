@@ -32,7 +32,7 @@
 	
 	<body <?php body_class(); ?>>
 	
-		<div class="big-wrapper">
+		<div class="big-wrapper"><!-- Monika is adding social media icons --><div id="gc-social"><a href="https://www.facebook.com/GirlsConf" target="_blank"><img src="http://girlsconf.com/wp-content/uploads/2014/07/icon-fb.png" width="32" height="32"></a><a href="http://instagram.com/GirlsConf" target="_blank"><img src="http://girlsconf.com/wp-content/uploads/2014/07/icon-ig.png" width="32" height="32"></a><a href="https://twitter.com/GirlsConf2014" target="_blank"><img src="http://girlsconf.com/wp-content/uploads/2014/07/icon-tw.png" width="32" height="32"></a></div>
 	
 			<div class="header-cover section bg-dark-light no-padding">
 		
