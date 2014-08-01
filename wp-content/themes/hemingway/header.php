@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 
 <html <?php language_attributes(); ?>>
-
-	<head>
-		
-		<meta charset="<?php bloginfo( 'charset' ); ?>">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
-																		
-		<title><?php wp_title('|', true, 'right'); ?></title>
+<head>
+<meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+<title>
+<?php wp_title('|', true, 'right'); ?>
+</title>
 <!-- Share This scripts -->
 <script type="text/javascript">var switchTo5x=true;</script>
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
@@ -23,94 +22,64 @@
   ga('send', 'pageview');
 
 </script>
-				
-		<?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
-		 
-		<?php wp_head(); ?>
-	
-	</head>
-	
-	<body <?php body_class(); ?>>
-	
-		<div class="big-wrapper"><!-- Monika is adding social media icons --><div id="gc-social"><a href="https://www.facebook.com/GirlsConf" target="_blank"><img src="http://girlsconf.com/wp-content/uploads/2014/07/icon-fb.png" width="32" height="32"></a><a href="http://instagram.com/GirlsConf" target="_blank"><img src="http://girlsconf.com/wp-content/uploads/2014/07/icon-ig.png" width="32" height="32"></a><a href="https://twitter.com/GirlsConf2014" target="_blank"><img src="http://girlsconf.com/wp-content/uploads/2014/07/icon-tw.png" width="32" height="32"></a></div>
-	
-			<div class="header-cover section bg-dark-light no-padding">
-		
-				<div class="header section" style="background-image: url(<?php if (get_header_image() != '') : ?><?php header_image(); ?><?php else : ?><?php echo get_template_directory_uri() . '/images/header.jpg'; ?><?php endif; ?>);">
-							
-					<div class="header-inner section-inner">
-					
-						<?php if ( get_theme_mod( 'hemingway_logo' ) ) : ?>
-						
-							<div class='blog-logo'>
-							
-						        <a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'title' ) ); ?> &mdash; <?php echo esc_attr( get_bloginfo( 'description' ) ); ?>' rel='home'>
-						        	<img src='<?php echo esc_url( get_theme_mod( 'hemingway_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'title' ) ); ?>'>
-						        </a>
-						        
-						    </div> <!-- /blog-logo -->
-					
-						<?php elseif ( get_bloginfo( 'description' ) || get_bloginfo( 'title' ) ) : ?>
-					
-							<div class="blog-info">
-							
-								<h1 class="blog-title">
-									<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'title' ) ); ?> &mdash; <?php echo esc_attr( get_bloginfo( 'description' ) ); ?>" rel="home"><?php echo esc_attr( get_bloginfo( 'title' ) ); ?></a>
-								</h1>
-								
-								<?php if ( get_bloginfo( 'description' ) ) { ?>
-								
-									<h3 class="blog-description"><?php echo esc_attr( get_bloginfo( 'description' ) ); ?></h3>
-									
-								<?php } ?>
-							
-							</div> <!-- /blog-info -->
-							
-						<?php endif; ?>
-									
-					</div> <!-- /header-inner -->
-								
-				</div> <!-- /header -->
-			
-			</div> <!-- /bg-dark -->
-			
-			<div class="navigation section no-padding bg-dark">
-			
-				<div class="navigation-inner section-inner">
-				
-					<div class="toggle-container hidden">
-			
-						<div class="nav-toggle toggle">
-								
-							<div class="bar"></div>
-							<div class="bar"></div>
-							<div class="bar"></div>
-							
-							<div class="clear"></div>
-						
-						</div>
-						
-						<div class="search-toggle toggle">
-								
-							<div class="metal"></div>
-							<div class="glass"></div>
-							<div class="handle"></div>
-						
-						</div>
-						
-						<div class="clear"></div>
-					
-					</div> <!-- /toggle-container -->
-					
-					<div class="blog-search hidden">
-					
-						<?php get_search_form(); ?>
-					
-					</div>
-				
-					<ul class="blog-menu">
-					
-						<?php if ( has_nav_menu( 'primary' ) ) {
+<?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
+<?php wp_head(); ?>
+</head>
+
+<body <?php body_class(); ?>>
+<div class="big-wrapper">
+<div class="header-cover section bg-dark-light no-padding">
+  <div class="header section" style="background-image: url(<?php if (get_header_image() != '') : ?><?php header_image(); ?><?php else : ?><?php echo get_template_directory_uri() . '/images/header.jpg'; ?><?php endif; ?>);">
+    <div class="header-inner section-inner">
+      <?php if ( get_theme_mod( 'hemingway_logo' ) ) : ?>
+      <div class='blog-logo'> <a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'title' ) ); ?> &mdash; <?php echo esc_attr( get_bloginfo( 'description' ) ); ?>' rel='home'> <img src='<?php echo esc_url( get_theme_mod( 'hemingway_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'title' ) ); ?>'> </a> </div>
+      <!-- /blog-logo -->
+      
+      <?php elseif ( get_bloginfo( 'description' ) || get_bloginfo( 'title' ) ) : ?>
+      <div class="blog-info">
+        <h1 class="blog-title"> <a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'title' ) ); ?> &mdash; <?php echo esc_attr( get_bloginfo( 'description' ) ); ?>" rel="home"><?php echo esc_attr( get_bloginfo( 'title' ) ); ?></a> </h1>
+        <?php if ( get_bloginfo( 'description' ) ) { ?>
+        <h3 class="blog-description"><?php echo esc_attr( get_bloginfo( 'description' ) ); ?></h3>
+        <?php } ?>
+      </div>
+      <!-- /blog-info -->
+      
+      <?php endif; ?>
+    </div>
+    <!-- /header-inner --> 
+    
+  </div>
+  <!-- /header --> 
+  
+</div>
+<!-- /bg-dark -->
+
+<div id="sticky-menu" class="navigation section no-padding bg-dark">
+  <div class="navigation-inner section-inner"> 
+    <!-- Monika is adding social media icons -->
+    <div id="gc-social"><a href="https://www.facebook.com/GirlsConf" target="_blank"><img src="http://gcdev.myb4.org/wp-content/uploads/2014/07/icon-fb.png" width="32" height="32"></a><a href="http://instagram.com/GirlsConf" target="_blank"><img src="http://gcdev.myb4.org/wp-content/uploads/2014/07/icon-ig.png" width="32" height="32"></a><a href="https://twitter.com/GirlsConf2014" target="_blank"><img src="http://gcdev.myb4.org/wp-content/uploads/2014/07/icon-tw.png" width="32" height="32"></a></div>
+    <!-- Stop adding social media icons -->
+    <div class="toggle-container hidden">
+      <div class="nav-toggle toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="clear"></div>
+      </div>
+      <div class="search-toggle toggle">
+        <div class="metal"></div>
+        <div class="glass"></div>
+        <div class="handle"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <!-- /toggle-container -->
+    
+    <div class="blog-search hidden">
+      <?php get_search_form(); ?>
+    </div>
+    <ul class="blog-menu">
+      <?php if ( has_nav_menu( 'primary' ) ) {
 																			
 							wp_nav_menu( array( 
 							
@@ -129,14 +98,10 @@
 							));
 							
 						} ?>
-												
-					 </ul>
-					 
-					 <div class="clear"></div>
-					 
-					 <ul class="mobile-menu">
-					
-						<?php if ( has_nav_menu( 'primary' ) ) {
+    </ul>
+    <div class="clear"></div>
+    <ul class="mobile-menu">
+      <?php if ( has_nav_menu( 'primary' ) ) {
 																			
 							wp_nav_menu( array( 
 							
@@ -155,9 +120,9 @@
 							));
 							
 						} ?>
-						
-					 </ul>
-				 
-				</div> <!-- /navigation-inner -->
-				
-			</div> <!-- /navigation -->
+    </ul>
+  </div>
+  <!-- /navigation-inner --> 
+  
+</div>
+<!-- /navigation -->

@@ -1,0 +1,73 @@
+/*
+Welcome to Custom CSS!
+
+CSS (Cascading Style Sheets) is a kind of code that tells the browser how
+to render a web page. You may delete these comments and get started with
+your customizations.
+
+By default, your stylesheet will be loaded after the theme stylesheets,
+which means that your rules can take precedence and override the theme CSS
+rules. Just write here what you want to change, you don't need to copy all
+your theme's stylesheet content.
+*/
+div.post-header {
+	display: none;
+	visibility: hidden;
+}
+
+div.section.bg-dark-light {
+	background: none;
+}
+
+div.header {
+	background-image: none;
+}
+
+div.header.section {
+	padding: 0;
+}
+
+div.header-inner {
+	text-align: left;
+}
+
+div.content.center {
+	width: 100%;
+}
+
+span.shareThis span.stButton span.chicklets {
+	color: rgb(102,102,102);
+}
+
+#gc-social {
+/*	position: absolute;
+	top: 0;
+	right: 0;*/
+	float: right;
+	z-index: 10;
+}
+
+#gc-social img {
+	margin: 1em .5em 0;
+	padding: 0;
+}
+
+#sticky-menu {
+	z-index: 999;
+}
+
+.post-content hr {
+	background: none repeat scroll 0 0 #ed668a;
+}
+
+.q {
+	font-weight: bold;
+}
+
+.a {
+	font-style: italic;
+}
+
+li.no-bullet {
+	list-style: none;
+}
